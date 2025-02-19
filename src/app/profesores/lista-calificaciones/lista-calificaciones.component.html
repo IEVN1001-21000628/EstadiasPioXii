@@ -66,41 +66,107 @@
          </aside>
     </div>
 
-<!--Formulario de tareas-->
+
+<!--Tabla de calificaciones-->
 
 <div class="flex">
     <div class="ml-64 p-6 w-[80%] mt-28">
-        <form class="max-w-sm mx-auto">
-            <div class="mb-5">
-                <label for="email" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Tarea</label>
-                <input type="email" id="email" class="shadow-xs bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500 dark:shadow-xs-light" placeholder="name@flowbite.com" required />
-            </div>
-            <div class="mb-5">
-                <label for="large-input" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Descripcion</label>
-      <input type="text" id="large-input" class="block w-full p-4 text-gray-900 border border-gray-300 rounded-lg bg-gray-50 text-base focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500">
-            </div>
-            <div class="mb-5">
-                <div id="date-range-picker" date-rangepicker class="flex items-center">
-                    <div class="relative">
-                    <div class="absolute inset-y-0 start-0 flex items-center ps-3 pointer-events-none">
-                        <svg class="w-4 h-4 text-gray-500 dark:text-gray-400" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 20 20">
-                            <path d="M20 4a2 2 0 0 0-2-2h-2V1a1 1 0 0 0-2 0v1h-3V1a1 1 0 0 0-2 0v1H6V1a1 1 0 0 0-2 0v1H2a2 2 0 0 0-2 2v2h20V4ZM0 18a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V8H0v10Zm5-8h10a1 1 0 0 1 0 2H5a1 1 0 0 1 0-2Z"/>
-                        </svg>
-                    </div>
-                    <input id="datepicker-range-start" name="start" type="date" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full ps-10 p-2.5  dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="Select date start">
-                    </div>
-                    <span class="mx-4 text-gray-500">to</span>
-                    <div class="relative">
-                    <div class="absolute inset-y-0 start-0 flex items-center ps-3 pointer-events-none">
-                        <svg class="w-4 h-4 text-gray-500 dark:text-gray-400" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 20 20">
-                            <path d="M20 4a2 2 0 0 0-2-2h-2V1a1 1 0 0 0-2 0v1h-3V1a1 1 0 0 0-2 0v1H6V1a1 1 0 0 0-2 0v1H2a2 2 0 0 0-2 2v2h20V4ZM0 18a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V8H0v10Zm5-8h10a1 1 0 0 1 0 2H5a1 1 0 0 1 0-2Z"/>
-                        </svg>
-                    </div>
-                    <input id="datepicker-range-end" name="end" type="date" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full ps-10 p-2.5  dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="Select date end">
-                </div>
-                </div>
-            </div>
-            <button type="submit" class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">Registrar tarea</button>
-        </form>
+        <div class="relative overflow-x-auto shadow-md sm:rounded-lg">
+            <table class="w-full text-sm text-left rtl:text-right text-blue-100 dark:text-blue-100">
+                <thead class="text-xs text-white uppercase bg-[#C83538] border-b border-[#FFD192] dark:text-white">
+                    <tr>
+                        <th scope="col" class="px-6 py-3 bg-[#C83538]">
+                            Materia
+                        </th>
+                        <th scope="col" class="px-6 py-3">
+                            Bimestre 1
+                        </th>
+                        <th scope="col" class="px-6 py-3 bg-[#C83538]">
+                            Bimestre 2
+                        </th>
+                        <th scope="col" class="px-6 py-3">
+                            Bimestre 3
+                        </th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr class="bg-blue-600 border-b border-[#FFD192]">
+                        <th scope="row" class="px-6 py-4 font-medium bg-[#C83538] text-blue-50 whitespace-nowrap dark:text-blue-100">
+                            Apple MacBook Pro 17"
+                        </th>
+                        <td class="px-6 py-4">
+                            Silver
+                        </td>
+                        <td class="px-6 py-4 bg-blue-500">
+                            Laptop
+                        </td>
+                        <td class="px-6 py-4">
+                            <button type="button" class="btn btn-success">
+                                <i class="bi bi-pencil-square"></i>
+                                Success
+                            </button>
+                        </td>
+                    </tr>
+                    <tr class="bg-blue-600 border-b border-[#FFD192]">
+                        <th scope="row" class="px-6 py-4 font-medium bg-[#C83538] text-blue-50 whitespace-nowrap dark:text-blue-100">
+                            Microsoft Surface Pro
+                        </th>
+                        <td class="px-6 py-4">
+                            White
+                        </td>
+                        <td class="px-6 py-4 bg-blue-500">
+                            Laptop PC
+                        </td>
+                        <td class="px-6 py-4">
+                            <button type="button" class="btn btn-success">
+                                <i class="bi bi-pencil-square"></i>
+                                Success
+                            </button>
+                        </td>
+                    </tr>
+                    <tr class="bg-blue-600 border-b border-[#FFD192]">
+                        <th scope="row" class="px-6 py-4 font-medium bg-[#C83538] text-blue-50 whitespace-nowrap dark:text-blue-100">                            Magic Mouse 2
+                        </th>
+                        <td class="px-6 py-4">
+                            Black
+                        </td>
+                        <td class="px-6 py-4 bg-blue-500">
+                            Accessories
+                        </td>
+                        <td class="px-6 py-4">
+                            $99
+                        </td>
+                    </tr>
+                    <tr class="bg-blue-600 border-b border-[#FFD192]">
+                        <th scope="row" class="px-6 py-4 font-medium bg-[#C83538] text-blue-50 whitespace-nowrap dark:text-blue-100">
+                            Google Pixel Phone
+                        </th>
+                        <td class="px-6 py-4">
+                            Gray
+                        </td>
+                        <td class="px-6 py-4 bg-blue-500">
+                            Phone
+                        </td>
+                        <td class="px-6 py-4">
+                            $799
+                        </td>
+                    </tr>
+                    <tr class="bg-blue-600 border-[#FFD192]">
+                        <th scope="row" class="px-6 py-4 font-medium bg-[#C83538] text-blue-50 whitespace-nowrap dark:text-blue-100">
+                            Apple Watch 5
+                        </th>
+                        <td class="px-6 py-4">
+                            Red
+                        </td>
+                        <td class="px-6 py-4 bg-blue-500">
+                            Wearables
+                        </td>
+                        <td class="px-6 py-4">
+                            $999
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
     </div>
 </div>
