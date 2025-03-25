@@ -1,12 +1,13 @@
 import { Component } from '@angular/core';
+import {Route, RouterOutlet } from '@angular/router';
 
 @Component({
   selector: 'app-alumno-vista',
   standalone: true,
-  imports: [],
+  imports: [RouterOutlet],
   templateUrl: './alumno-vista.component.html',
   styles: ``
 })
-export class AlumnoVistaComponent {
+export default class AlumnoVistaComponent {
 
 }
